@@ -312,12 +312,12 @@ local_check_docker_hub_image_version() {
   #fi
 
   # Check if image and version exists in docker hub
-  run_function dockerhub_check_image_exists $LOCAL_DOCKER_IMAGE_NAME $LOCAL_DOCKER_IMAGE_VERSION
+  #run_function dockerhub_check_image_exists $LOCAL_DOCKER_IMAGE_NAME $LOCAL_DOCKER_IMAGE_VERSION
 
-  if [[ "$DOCKERHUB_IMAGE_EXISTS" != true ]]; then
-    echoerror "It seems the image '$LOCAL_DOCKER_IMAGE_NAME:$LOCAL_DOCKER_IMAGE_VERSION' does not exist in docker hub (https://hub.docker.com) or the site is down. Wait a few minutes and try again." false
-    local_undo_restore
-  fi
+  #if [[ "$DOCKERHUB_IMAGE_EXISTS" != true ]]; then
+  #  echoerror "It seems the image '$LOCAL_DOCKER_IMAGE_NAME:$LOCAL_DOCKER_IMAGE_VERSION' does not exist in docker hub (https://hub.docker.com) or the site is down. Wait a few minutes and try again." false
+  #  local_undo_restore
+  #fi
 }
 
 #-----------------------------------------------------------------------
