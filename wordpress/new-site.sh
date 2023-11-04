@@ -596,6 +596,11 @@ fi
 # Set the local env variables [@TODO - Update to argument variables if needed]
 LOCAL_COMPOSE_PROJECT_NAME="$LOCAL_PROJECT_NAME-${COMPOSE_UNIQUE_TAG,,}"
 LOCAL_CONTAINER_DB_NAME="$LOCAL_PROJECT_NAME-db-$COMPOSE_UNIQUE_TAG"
+
+echo "-----------------------------"
+echo $DB_ROOT_PASSWORD
+echo "-----------------------------"
+
 LOCAL_MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD:-$RANDOM_STRING$COMPOSE_UNIQUE_TAG}
 LOCAL_MYSQL_DATABASE=$LOCAL_SITE_NAME
 LOCAL_MYSQL_USER=${LOCAL_SITE_NAME:0:9}"_user"
@@ -664,6 +669,7 @@ echoline "LOCAL_CONTAINER_DB_NAME: $LOCAL_CONTAINER_DB_NAME"
 echoline "LOCAL_MYSQL_DATABASE: $LOCAL_MYSQL_DATABASE"
 echoline "LOCAL_MYSQL_USER: $LOCAL_MYSQL_USER"
 echoline "LOCAL_MYSQL_PASSWORD: $LOCAL_MYSQL_PASSWORD"
+echoline "LOCAL_MYSQL_ROOT_PASSWORD: $LOCAL_MYSQL_ROOT_PASSWORD"
 
 echowarning "The new site might take a few minutes to be ready. Please wait..."
 echowarning "If you get database connection error, wait a couple more minutes. Database might take some time to end its creation. You can check the DB container running the follow:"
