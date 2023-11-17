@@ -26,6 +26,9 @@
 local_update_docker_compose_file()
 {
     local LOCAL_FULL_PATH 
+	
+	echo "-----------------LOCAL_FULL_PATH--------------------------"
+	echo LOCAL_FULL_PATH
 
     LOCAL_FULL_PATH=${1}
 
