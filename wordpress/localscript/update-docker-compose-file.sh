@@ -26,11 +26,11 @@
 local_update_docker_compose_file()
 {
     local LOCAL_FULL_PATH 
-	
-	echo "-----------------LOCAL_FULL_PATH--------------------------"
-	echo LOCAL_FULL_PATH
 
     LOCAL_FULL_PATH=${1}
+	
+	echo "-----------------LOCAL_FULL_PATH--------------------------"
+	echo $LOCAL_FULL_PATH
 
     [[ $LOCAL_FULL_PATH == "" || $LOCAL_FULL_PATH == null ]] && echoerror "You must inform the required argument(s) to the function: '${FUNCNAME[0]}'"
 
