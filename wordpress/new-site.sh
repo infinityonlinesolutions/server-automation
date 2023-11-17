@@ -559,6 +559,10 @@ fi
 # Clone the repo
 #-----------------------------------------------------------------------
 run_function git_clone_repo $LOCAL_GIT_REPO $LOCAL_SITE_FULL_PATH $LOCAL_GIT_TAG "compose"
+
+echo "$LOCAL_GIT_REPO $LOCAL_SITE_FULL_PATH $LOCAL_GIT_TAG"
+echo $LOCAL_GIT_REPO $LOCAL_SITE_FULL_PATH $LOCAL_GIT_TAG
+
 if [[ $RESPONSE_GIT_CLONE_REPO != "" ]]; then
     echowarning "$RESPONSE_GIT_CLONE_REPO"
     local_undo_restore
